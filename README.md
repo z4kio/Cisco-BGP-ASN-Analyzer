@@ -37,20 +37,21 @@ pip install pandas requests
 ### IPv4
 
 ```cisco
-show ip bgp neighbors <NEIGHBOR-IP> routes
-show ip bgp neighbors 203.76.110.1 routes | redirect flash:203.76.110.1-routes.txt
+show ip bgp neighbors <NEIGHBOR-IP> received-routes
+show ip bgp neighbors 203.76.110.1 routes | redirect bootflash:203.76.110.1-routes.txt
 ```
 
 ### VPNv4
 
 ```cisco
-show ip bgp vpnv4 vrf <VRF_NAME> neighbors <NEIGHBOR-IP> routes
+show ip bgp vpnv4 vrf <VRF_NAME> neighbors <NEIGHBOR-IP> received-routes
+show ip bgp vpnv4 vrf <VRF_NAME> neighbors <NEIGHBOR-IP> received-routes | redirect bootflash:203.76.110.1-routes.txt
 ```
 
 ## Usage
 
-1. Export the BGP received routes from your Cisco router.
-2. Copy the output to `bgp_neighbor_routes.txt`.
+1. Export or copy paste the BGP received routes from your Cisco router.
+2. Save the txt file as `bgp_neighbor_routes.txt`.
 3. Place the text file in the same directory as `asn_lookup_ripestat.py`.
 4. Run:
 
@@ -70,18 +71,9 @@ Columns:
 - AS_Name
 - Prefix_Count
 
-## RIPEstat API
+## RIPEstat Data API
 
 https://stat.ripe.net/docs/data-api/ripestat-data-api
-
-## Roadmap
-
-- IPv6 support
-- CLI arguments
-- Excel export
-- JSON export
-- Progress bar
-- Multi-threaded lookups
 
 ## License
 
