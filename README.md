@@ -71,6 +71,32 @@ Columns:
 - AS_Name
 - Prefix_Count
 
+
+# Screenshots
+
+## 1. Verify Python Installation
+
+Ensure Python is installed before running the script.
+
+![Python Version](images/python-version.jpg)
+
+---
+
+## 2. Running the Script
+
+The script parses the exported Cisco BGP routes and performs RIPEstat lookups for each unique ASN.
+
+![Running Script](images/script-running.jpg)
+
+---
+
+## 3. Generated CSV Report
+
+The final CSV contains the ASN, ASN holder name, and the number of received prefixes.
+
+![CSV Output](images/output-csv.jpg)
+
+
 ## RIPEstat Data API
 
 https://stat.ripe.net/docs/data-api/ripestat-data-api
