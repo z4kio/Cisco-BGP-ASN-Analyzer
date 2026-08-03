@@ -38,14 +38,14 @@ pip install pandas requests
 
 ```cisco
 show ip bgp neighbors <NEIGHBOR-IP> received-routes
-show ip bgp neighbors 203.76.110.1 routes | redirect bootflash:203.76.110.1-routes.txt
+show ip bgp neighbors 172.16.10.1 routes | redirect bootflash:172.16.10.1-routes.txt
 ```
 
 ### VPNv4
 
 ```cisco
 show ip bgp vpnv4 vrf <VRF_NAME> neighbors <NEIGHBOR-IP> received-routes
-show ip bgp vpnv4 vrf <VRF_NAME> neighbors <NEIGHBOR-IP> received-routes | redirect bootflash:203.76.110.1-routes.txt
+show ip bgp vpnv4 vrf VRF-X neighbors 172.16.10.1 received-routes | redirect bootflash:172.16.10.1-routes.txt
 ```
 
 ## Usage
