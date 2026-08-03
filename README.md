@@ -53,7 +53,7 @@ show ip bgp vpnv4 vrf VRF-X neighbors 172.16.10.1 received-routes | redirect boo
 1. Export or copy paste the BGP received routes from your Cisco router.
 2. Save the txt file as `bgp_neighbor_routes.txt`.
 3. Place the text file in the same directory as `asn_lookup_ripestat.py`.
-4. Run:
+4. Navigate to the folder from terminal and Run:
 
 ```bash
 python asn_lookup_ripestat.py
